@@ -13,7 +13,7 @@ public class TeamManager {
         this.teams = new ArrayList<>();
     }
 
-    public void addTeam(TeamColor color, net.projektcontingency.minigameapi.maps.Map map) {
+    public void addTeams() {
         try {
             teams.add(clazz.getConstructor(color.getClass(), map.getClass()).newInstance(color, map));
         } catch (Exception ex) {

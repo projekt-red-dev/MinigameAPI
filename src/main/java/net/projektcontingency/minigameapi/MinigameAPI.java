@@ -10,6 +10,8 @@ public final class MinigameAPI extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         instance = this;
+
+
     }
 
     @Override

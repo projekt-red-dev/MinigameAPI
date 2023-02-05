@@ -1,11 +1,13 @@
 package net.projektcontingency.minigameapi;
 
 import net.projektcontingency.minigameapi.teams.Team;
+import net.projektcontingency.minigameapi.teams.TeamColor;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Minigame extends JavaPlugin {
 
@@ -13,7 +15,7 @@ public abstract class Minigame extends JavaPlugin {
     protected Status status;
     protected Countdown countdown;
 
-    public Minigame() {
+    public Minigame(List<TeamColor> colors) {
         this.players = new ArrayList<>();
         this.status = Status.QUEUING;
     }
@@ -40,8 +42,10 @@ public abstract class Minigame extends JavaPlugin {
             p.sendMessage(player.getDisplayName() + ChatColor.YELLOW + " just joined the game! " + ps + "(" + this.players.size() + "/" + this.getMaxPlayers() + ")");
         }
 
-        if (isAtMax())
-            this.countdown = new Countdown(15, this.players, this::start);
+
+
+        if (isAtMin())
+            this.countdown = new Countdown(15, this::start, this::onCountdownTick);
     }
 
     public void removePlayer(Player player) {
@@ -55,6 +59,8 @@ public abstract class Minigame extends JavaPlugin {
     }
 
     abstract void start();
+
+    abstract void onCountdownTick(int time);
 
     abstract void end(Team winner);
 }

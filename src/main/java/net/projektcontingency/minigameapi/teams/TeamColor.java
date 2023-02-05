@@ -7,35 +7,25 @@ import org.bukkit.inventory.ItemStack;
 
 public enum TeamColor {
     WHITE(ChatColor.WHITE, new ItemConstructor(Material.WHITE_CONCRETE)
-            .setName(ChatColor.GOLD + "White Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "white team!")),
+            .setName(ChatColor.GOLD + "White Team")),
     LIGHT_GRAY(ChatColor.GRAY, new ItemConstructor(Material.LIGHT_GRAY_CONCRETE)
-            .setName(ChatColor.GOLD + "Light Gray Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "light gray team!")),
+            .setName(ChatColor.GOLD + "Light Gray Team")),
     GRAY(ChatColor.DARK_GRAY, new ItemConstructor(Material.GRAY_CONCRETE)
-            .setName(ChatColor.GOLD + "Gray Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "gray team!")),
+            .setName(ChatColor.GOLD + "Gray Team")),
     RED(ChatColor.RED, new ItemConstructor(Material.RED_CONCRETE)
-            .setName(ChatColor.GOLD + "Red Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "red team!")),
+            .setName(ChatColor.GOLD + "Red Team")),
     YELLOW(ChatColor.YELLOW, new ItemConstructor(Material.YELLOW_CONCRETE)
-            .setName(ChatColor.GOLD + "Yellow Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "yellow team!")),
+            .setName(ChatColor.GOLD + "Yellow Team")),
     GREEN(ChatColor.GREEN, new ItemConstructor(Material.GREEN_CONCRETE)
-            .setName(ChatColor.GOLD + "Green Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "green team!")),
+            .setName(ChatColor.GOLD + "Green Team")),
     AQUA(ChatColor.AQUA, new ItemConstructor(Material.CYAN_CONCRETE)
-            .setName(ChatColor.GOLD + "Aqua Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "aqua team!")),
+            .setName(ChatColor.GOLD + "Aqua Team")),
     BLUE(ChatColor.BLUE, new ItemConstructor(Material.BLUE_CONCRETE)
-            .setName(ChatColor.GOLD + "Blue Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "blue team!")),
+            .setName(ChatColor.GOLD + "Blue Team")),
     PURPLE(ChatColor.DARK_PURPLE, new ItemConstructor(Material.PURPLE_CONCRETE)
-            .setName(ChatColor.GOLD + "Purple Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "purple team!")),
+            .setName(ChatColor.GOLD + "Purple Team")),
     PINK(ChatColor.LIGHT_PURPLE, new ItemConstructor(Material.PINK_CONCRETE)
-            .setName(ChatColor.GOLD + "Pink Team")
-            .setLore(ChatColor.GRAY, "Click to join the", "pink team!"));
+            .setName(ChatColor.GOLD + "Pink Team"));
 
     private final ChatColor color;
     private final ItemStack item;
